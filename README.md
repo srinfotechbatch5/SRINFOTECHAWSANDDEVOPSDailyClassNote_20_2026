@@ -1689,3 +1689,105 @@ Please create a New Jenkins jobs both POLL SCM & Build Periodically
 https://github.com/srinfotechbatch5/spring-petclinic.git
 
 https://github.com/srinfotechbatch5/onlinebookstore.git
+
+
+
+07/01/2026::
+==============
+
+
+
+Automatically Discard Old Builds:::
+==============================
+To automate the process of discarding old builds, you can configure the job’s settings to automatically delete old builds based on criteria such as the number of builds to keep or the age of the builds.
+
+Follow these steps:
+
+Open the Jenkins job (project).
+Click on Configure (on the left-hand side).
+Scroll down to the Build Discarder section (usually under the Build Triggers section).
+Check Discard old builds.
+Specify the following options:
+Max # of builds to keep: Set the maximum number of builds to keep.
+Max days to keep builds: Set the maximum age for builds to keep.
+Save the configuration by clicking Save.
+
+
+![image](https://github.com/user-attachments/assets/8d8c9cf9-988a-41e4-b052-539ef601171f)
+
+
+
+Execute concurrent builds if necessary::
+===================================
+
+When this option is checked, multiple builds of this project may be executed in parallel.
+By default, only a single build of a project is executed at a time — any other requests to start building that project will remain in the build queue until the first build is complete.
+
+
+![image](https://github.com/user-attachments/assets/909edd87-548d-4ded-a862-29cf850fac05)
+
+
+Here 5 builds execute parallel ,I kept executor is 5 this is same machine 
+
+![image](https://github.com/user-attachments/assets/a840a224-5cbb-43cc-92c1-d135db4ce00f)
+
+
+
+Execute the Jobs in Parallel::
+==============================
+
+
+1.By Default execute the Jenkins build jobs are sequence way,one by one 
+
+2.Don’t do 2 projects build parallel  this is real time scenario but we can do parallel builds as well one job
+
+Jenkins build parallel setup
+
+Go job ---> configure ----> Generall ---> Execute concurrent builds if necessary
+
+
+![image](https://github.com/user-attachments/assets/3216a68f-b10b-44cd-83b5-b62c27525296)
+
+
+![image](https://github.com/user-attachments/assets/909edd87-548d-4ded-a862-29cf850fac05)
+
+
+Here 5 builds execute parallel ,I kept executor is 5 this is same machine 
+
+![image](https://github.com/user-attachments/assets/a840a224-5cbb-43cc-92c1-d135db4ce00f)
+
+
+Whenever you configure a build activities :::
+=======================================
+
+SCM::
+
+	Where is your project
+
+Build environment::
+
+---all about your workspace folders 
+
+Build Triggers::
+
+--whenever code changes 
+--periodic
+---script calls 
+
+Build steps::
+
+Dev team will tell ,
+
+Post build::
+
+That aim is giving continue feedback to dev team
+
+
+Email Notifications::
+=======================
+
+1.Setting up Jenkins Email Notifications allows you to alert your team when a build passes, fails, or encounters issues. Here's a step-by-step guide to configure it
+
+2. give continues Feedback to the Dev team via Email when a build passes, fails
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7883457a-8bfa-4295-a742-b82dde25c8df" />
