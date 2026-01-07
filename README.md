@@ -1433,6 +1433,8 @@ Jenkins server ask git if there is any changes in git server or not, if changes 
 <img width="1118" height="641" alt="image" src="https://github.com/user-attachments/assets/39aa389b-fecf-4ea6-aa46-7fbe42ef5b58" />
 
 
+<img width="1359" height="632" alt="image" src="https://github.com/user-attachments/assets/1ce623db-ef28-4e75-a463-497025110bbd" />
+
 
 POLL SCM ----* * * * * --every minute when every commit 
 
@@ -1650,12 +1652,18 @@ Poll SCM ::
 
 Jenkins server ask git if there is any changes in git server or not, if changes there Jenkins server build/package the changes , every change build happened like 5 mints ,means every 5 minutes verify the Jenkins server to git if there is any changes 
 
-![image](https://github.com/user-attachments/assets/6f436ad6-e92a-40e3-831a-23219c288217)
+<img width="1359" height="632" alt="image" src="https://github.com/user-attachments/assets/dcb92205-d262-45a0-b466-a3726b656428" />
+
 
 POLL SCM ----* * * * * --every minute when every commit 
 
 Build Periodically:::	
 ============================
+
+
+<img width="1232" height="587" alt="image" src="https://github.com/user-attachments/assets/aee681d7-2a6b-4954-b040-1af1f4d7e318" />
+
+
 
 H/15 * * * *   ----this build happened every 5 minutes without commits ,if changes are commit or not but every 5 mints build happened in Jenkins 
 
