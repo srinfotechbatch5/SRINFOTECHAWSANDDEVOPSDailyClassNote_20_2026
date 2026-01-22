@@ -90,7 +90,8 @@ What is Git?
 Git is a free, open-source version control system (VCS) that helps developers manage their code. It's the most widely used tool VCS(version control system) Git is fast for committing, branching, merging, and comparing past versions Git is very high Performance and Flexibility,Security.
 
 
-<img width="1200" height="633" alt="image" src="https://github.com/user-attachments/assets/f2b31798-6591-4464-9f7d-ecb9a7c96f96" />
+<img width="1642" height="751" alt="image" src="https://github.com/user-attachments/assets/b318e637-fc0c-4576-81a0-cb62bb39266c" />
+
 
 
 
