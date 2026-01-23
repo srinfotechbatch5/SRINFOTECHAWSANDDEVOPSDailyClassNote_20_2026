@@ -280,3 +280,153 @@ The key's randomart image is:
 
 
 
+
+22/01/2026::
+==============
+
+Fork in Github::
+====================
+
+In GitHub, forking is a way to create your own copy of someone else's repository. example please fork below project to your own github account
+
+https://github.com/srinfotechbatch5/Demo#
+
+steps to fork the project::
+============================
+
+Go to Above Project URL
+
+https://github.com/srinfotechbatch3/DevOpsDemo
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/45b0c823-863d-447b-943e-a32cbfc6cb65" />
+
+
+at top right we can found Fork option in github Account 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/406477ce-4851-462c-9187-30e50320c4f7" />
+
+
+Click on Fork and click create Fork 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f399adbd-d00c-4cd9-9dd3-9a0e16170aa5" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/59c07b24-f750-41ba-851c-4f2b6712ccaf" />
+
+
+Successfully Fork done from someone else's repository 
+
+once above steps done ,please clone the Project and Modified files and push to github repository
+
+
+Git Commands::
+================
+
+1. git clone <repository url>
+
+>git clone 
+
+>cd <repository name>
+
+>git status
+
+>git add --all
+
+after added the files we need to verify the status of the files
+
+>git status
+
+>git commit -m "message"
+
+>git push    ---> push the changes from local machine to remote
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+>ssh-keygen -t ed25519 -C "srinfotechbatch5@gmail.com"
+
+Lab Practice::
+=================
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6
+$ git clone git@github.com:srinfotechbatch5/Demo.git
+Cloning into 'Demo'...
+The authenticity of host 'github.com (64:ff9b::14cf:4952)' can't be established.
+ED25519 key fingerprint is: SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yesHost key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6
+$ git clone git@github.com:srinfotechbatch5/Demo.git
+Cloning into 'Demo'...
+The authenticity of host 'github.com (64:ff9b::14cf:4952)' can't be established.
+ED25519 key fingerprint is: SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6
+$ cd Demo/
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        HelloWorld.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Demo (main)
+$ git add --all
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'HelloWorld.java', LF will be replaced by CRLF the next time Git touches it
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   HelloWorld.java
+        modified:   README.md
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Demo (main)
+$ git commit -m "added few project files"
+[main f561048] added few project files
+ 3 files changed, 41 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ create mode 100644 HelloWorld.java
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Demo (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 750 bytes | 375.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:srinfotechbatch5/Demo.git
+   47f99cf..f561048  main -> main
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Demo (main)
+$
