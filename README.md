@@ -906,3 +906,145 @@ commit     Record changes to the repository
  pull       Fetch from and integrate with another repository or a local branch
  
  push       Update remote refs along with associated objects
+
+
+
+27/01/2026::
+=============
+
+>git fetch--->just fetch
+
+>git pull -->fetch+merged
+
+
+>git pull   ---> pull the changes from remote to local -->fetch+merge
+
+
+>git fetch  --->just fetch the details from remote to local  -->just only fetch the details
+
+
+Lab Practice::
+================
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Developer1/onlinebookstore (feature/2026.01.26)
+$ git fetch --help
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Developer1/onlinebookstore (feature/2026.01.26)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 935 bytes | 34.00 KiB/s, done.
+From github.com:srinfotechbatch5/onlinebookstore
+   bd3b575..f47536a  feature/2026.01.26 -> origin/feature/2026.01.26
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Developer1/onlinebookstore (feature/2026.01.26)
+$ git pull
+Updating bd3b575..f47536a
+Fast-forward
+ Jenkinsfile | 21 +--------------------
+ 1 file changed, 1 insertion(+), 20 deletions(-)
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Developer1/onlinebookstore (feature/2026.01.26)
+$ git fetch
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Developer1/onlinebookstore (feature/2026.01.26)
+$ git fetch
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 2.07 KiB | 92.00 KiB/s, done.
+From github.com:srinfotechbatch5/onlinebookstore
+   58c7929..efa6f24  master     -> origin/master
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Developer1/onlinebookstore (feature/2026.01.26)
+$ git fetch
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 1.78 KiB | 50.00 KiB/s, done.
+From github.com:srinfotechbatch5/onlinebookstore
+   f47536a..c21aa90  feature/2026.01.26 -> origin/feature/2026.01.26
+   efa6f24..97554bd  master             -> origin/master
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Developer1/onlinebookstore (feature/2026.01.26)
+$ git pull
+Updating f47536a..c21aa90
+Fast-forward
+ pom.xml | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/Demo Batch6/Developer1/onlinebookstore (feature/2026.01.26)
+$ git fetch
+
+
+Class Note::
+============
+
+1.install git
+
+2.introduction about the VCS ---git
+
+3.SCM --source code management tool -->github
+
+4.intriduction abot the github
+
+5.create the github account
+
+6.crete the repo's/repositories
+
+7.integrate git & github via SSH keys--->ssh-keygen -t ed25519 "srinfi@gmail.com"
+
+8.how to create the branches in github
+
+9.integarted and independent 
+
+10.how to rasie PR--pull request
+
+11.git commands
+
+12.git clone 
+
+13.cd <repo name>
+
+14.git checkout <branch name>
+
+15.git status
+
+16.git add --all  OR git add <filename>
+
+17.git status
+
+18.git commit -m "message"
+
+19.git push
+
+20.git pull
+
+21.git fetch
+
+if any facing conflicts
+
+open editor
+
+1.press i from your keyboard
+
+2.esc from your keyboard
+
+3.swift+:
+
+4.wq
+
+5.enter
+
+22.github branching strategy 
+
+23.git flow model
+
+24.how to resolved the conflicsts if multiple peopel are working same project
+
+25.end to end flow of git & github
