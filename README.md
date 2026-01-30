@@ -1225,3 +1225,214 @@ Installed the default suggested plugins
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cb89c015-8816-4269-b365-128c645375b5" />
 
+
+
+29/01/2026::
+============
+
+
+Installed the default suggested plugins
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/8a80769d-672b-42c4-ad59-bdb5a288abc7" />
+
+
+click on continue 
+
+Need to create jenkins user profile 
+
+USER Name--->admin (any name you can provide)
+
+PASSWORD  -->admin  (any password as your wish but make sure you should remembered the these credentials)
+
+![image](https://github.com/user-attachments/assets/f0458a88-da81-4d32-9f87-42458fd214a1)
+
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e11ae91e-ec78-42e1-b64d-19696755931a" />
+
+
+
+Maven setup::
+=============
+
+Maven is a powerful build automation and project management tool, primarily used with Java projects
+
+
+<img width="1784" height="644" alt="image" src="https://github.com/user-attachments/assets/7fd9f762-5293-4297-a371-2cc052404a3a" />
+
+
+Please follow the below link for more understading the Maven lifecycles OR maven Goals
+
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+MAVEN_HOME=C:\Users\HP\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fca1b236-b778-490e-abec-61298f74bb9d" />
+
+
+Download link
+
+https://maven.apache.org/download.cgi
+
+
+Make sure we should setup the path at system variable 
+
+JAVA_HOME & MAVEN_HOME
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c7c2c771-4be4-4488-83b4-c3b9172beca3" />
+
+
+
+now verify the java version & maven version:: go to git bash and verify. below are refreenced screenshots
+
+> java -version
+
+
+C:\Users\HP>java --version
+java 17.0.12 2024-07-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.12+8-LTS-286, mixed mode, sharing)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/638553a1-2319-43c3-89e3-4e9cd949a634" />
+
+
+> mvn -v
+
+C:\Users\HP>mvn -v
+Apache Maven 3.8.9 (e26b057cc3a17459358ef53e4d0e2e381bf08a1c)
+Maven home: C:\Users\HP\Downloads\apache-maven-3.8.9-bin\apache-maven-3.8.9
+Java version: 17.0.12, vendor: Oracle Corporation, runtime: C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/329d0a8b-1d56-4d27-957d-a779c236224b" />
+
+
+
+once above setup is ready then we will proceed to installe jenkins
+
+Common Maven Commands::
+==========================
+
+1.mvn clean         # Clean up previous builds
+
+2.mvn compile       # Compile source code
+
+3.mvn test          # Run unit tests
+
+4.mvn package       # Create a JAR/WAR
+
+5.mvn install       # Install package into local repo
+6.mvn clean install        # Deploy package to remote repo
+
+
+Create sample Freestyle project::
+============================
+
+Github Project URL:::
+=====================
+
+https://github.com/srinfotechbatch5/spring-petclinic
+
+
+
+Click New Item
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e8a51a17-f3f8-4719-95f0-551ad8e2fb4f" />
+
+Enter an item name     ---->This Should be Name of your Project
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/adebc306-828a-4920-bb47-63d8fe060c67" />
+
+
+Click OK
+
+
+Configuration stages::
+
+1.General
+
+2.Source code management (SCM)
+
+3.Triggres
+
+4.Environment
+
+5.Build Steps
+
+6.Post Build Actions
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/515589a7-463e-4209-94e5-cf6c2ce6caab" />
+
+
+
+General Section provide the Project/job description 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a92f0756-1444-490e-a60b-d3c48bc4be84" />
+
+
+At SCM stage level select the Git and provide the github details
+
+
+https://github.com/srinfotechbatch5/spring-petclinic
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6f736b3a-6179-4a86-a56b-08d76c22ffdd" />
+
+
+Branches to build
+
+main branch and this branch should match with github repository branch
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d4094c2-e384-4a08-b699-1e4fc4625656" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b392b9e0-631c-404d-bcd7-3e26c096fb16" />
+
+
+Build steps::select the Invoke top-level Maven targets
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/659cddb4-e8fd-44b8-a6c6-1e77a62eaf1b" />
+
+
+Goals section
+>mvn clean install
+
+Maven goals::
+
+>mvn test
+
+>mvn install
+
+
+>mvn clean install
+
+
+>mvn clean
+
+
+>mvn package
+
+>mvn compile
+
+![image](https://github.com/user-attachments/assets/53d49170-9dfe-4cad-abc0-50bf268e96c7)
+
+
+Job will be created
+
+Click Build Now
+
+
+Buils is Inprogress
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3444e4a2-865d-41ce-be9e-aa8e8da44d67" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d877e99a-1e20-4ddc-b061-81a585b67ea5" />
+
+
+Build Sucess
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/de5df49e-4413-4804-9413-26e7a6cda71c" />
+
+
