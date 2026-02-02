@@ -1436,3 +1436,129 @@ Build Sucess
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/de5df49e-4413-4804-9413-26e7a6cda71c" />
 
 
+
+30/01/2026::
+============
+
+
+Poll SCM ::
+=============
+
+Jenkins server ask git if there is any changes in git server or not, if changes there Jenkins server build/package the changes , every change build happened like 5 mints ,means every 5 minutes verify the Jenkins server to git if there is any changes 
+
+
+<img width="1663" height="684" alt="image" src="https://github.com/user-attachments/assets/4f831f81-ab6b-42b4-8e73-752076df2cbe" />
+
+
+POLL SCM ----* * * * * --every minute when every commit 
+
+Chrone JObs Formate LInk::
+=============================
+
+https://crontab.guru/examples.html
+
+
+Create one sample POLL SCM jenkins job::
+===========================================
+
+Go to jenkins Dashboard
+
+click New Item
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/098730bb-4882-4e6e-9627-2670dbff097a" />
+
+
+Description
+
+![image](https://github.com/user-attachments/assets/8385086f-ae72-4630-baa2-38e16e9866c2)
+
+
+
+Provide the Git URL
+
+Onlinebookstore Project::
+=========================
+
+https://github.com/srinfotechbatch4/onlinebookstore.git
+
+
+![image](https://github.com/user-attachments/assets/647ef983-c76e-4c48-b928-e43ab5d47570)
+
+
+
+Branch buiild
+
+![image](https://github.com/user-attachments/assets/cd011371-c6c5-40d6-a44a-b51186d0e3af)
+
+
+POLL SCM:: * * * * *
+
+every minute build was trigger when new commits happend in github repository
+
+
+![image](https://github.com/user-attachments/assets/899495ff-ce8c-4381-a012-5d058584809a)
+
+
+
+Build Steps::
+
+Select Invoke top-level Maven targets
+
+
+![image](https://github.com/user-attachments/assets/8a818614-ba02-45d5-a98d-8d94adbe68f7)
+
+
+
+Once New Commits Happend in Github , Automatically Build is triggered in The Jenkins Server this Called CI (Continuous Integration)
+
+
+
+Check Your Workspace::
+========================== 
+
+once build success we can bale to see the /target folder under the Workspace
+
+
+![image](https://github.com/user-attachments/assets/d860064f-6f5f-4ef2-aa93-363bf45e47c5)
+
+
+1.To check a job's workspace:
+
+2.Navigate to the job in the Jenkins UI.
+
+3.Click on "Workspace" in the left sidebar.
+
+![image](https://github.com/user-attachments/assets/f5ab670a-e7aa-4372-bbea-c3a1c130fe3a)
+
+
+
+Under Target Folder we can able to see the all .ear/war/jar/zip Artifacts Formates
+
+
+![image](https://github.com/user-attachments/assets/369fe791-fb6e-4a59-8fb1-99a14df190c3)
+
+
+PLease try to execute the Project with below Maven Goals and see the difference 
+
+
+Common Maven Commands OR Maven Goals::
+======================================
+
+https://github.com/srinfotechbatch5/spring-petclinic.git
+
+https://github.com/srinfotechbatch5/onlinebookstore.git
+
+1) mvn clean	  ------------> Deletes target/ directory (clean build).
+
+2) mvn compile	-----------> Compiles the source code.
+   
+3) mvn test	   ------------> Runs tests.
+   
+4) mvn package	------------> Creates a JAR/WAR.
+  
+5) mvn install	------------> Installs package into your local repository.
+  
+6) mvn deploy	-------------> Deploys package to a remote repository.
+
+
+
