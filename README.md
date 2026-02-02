@@ -1447,7 +1447,16 @@ Poll SCM ::
 Jenkins server ask git if there is any changes in git server or not, if changes there Jenkins server build/package the changes , every change build happened like 5 mints ,means every 5 minutes verify the Jenkins server to git if there is any changes 
 
 
+
+
+
 <img width="1663" height="684" alt="image" src="https://github.com/user-attachments/assets/4f831f81-ab6b-42b4-8e73-752076df2cbe" />
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b59dd459-4574-4039-873c-4b97787074b7" />
+
 
 
 POLL SCM ----* * * * * --every minute when every commit 
