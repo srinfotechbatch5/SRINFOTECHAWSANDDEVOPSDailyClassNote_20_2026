@@ -2035,3 +2035,95 @@ Click Build
 
 
 ![image](https://github.com/user-attachments/assets/28afabd9-1c84-4313-95c6-1ec8bd50488d)
+
+
+
+09/02/2026 ::
+=================
+
+
+I want Build a 3 projects ::
+===========================
+
+I want a build 3 projects ,one project build is success then it will start 2nd project & once 2nd project build is success then it will start 3rd Project, without manually interventions we need setup these 3 projects configurations.
+
+
+<img width="1701" height="762" alt="image" src="https://github.com/user-attachments/assets/daa81276-0311-4862-a5ca-dd5df5265a98" />
+
+
+![image](https://github.com/user-attachments/assets/5d043ea2-97c3-4b8f-8b56-95703e1adf95)
+
+
+
+![image](https://github.com/user-attachments/assets/b2dfde9d-e397-46b8-a8cb-67ab3711b141)
+
+
+Project-A, Projec -B, Projec - C 
+
+Once Project-A build is done, then it will start Project-B build and once Project-B build SUccess then it will start Project-C build ---for this we need to select Add post-build action and select "Build other projects" in drop down and provide Project-B details.
+
+
+![image](https://github.com/user-attachments/assets/048a99bc-bcf6-47ca-9b27-ef23152eab97)
+
+
+Projec A is  (Downstream project is ---Projec B)
+
+Projec B is (UP Stream project is ----Projec A)
+
+Projec C is (downstream project of --Projec B)
+
+i created 3 free style project in jenkins 
+
+Project-A ::
+==============
+
+Github URL::: https://github.com/srinfotechbatch5/spring-petclinic.git
+
+![image](https://github.com/user-attachments/assets/e8073061-b815-4945-bd7f-c20b3a6576e2)
+
+
+Post Build Action , select the option Build Other Project  Project-B
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d4b24fde-a3a9-4b98-882b-69dc46a4e9e6" />
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0b792995-005a-4175-9cdb-4cd8524fea60" />
+
+
+Project -B ::
+=============
+
+Github URL:::https://github.com/srinfotechbatch5/onlinebookstore.git
+
+
+![image](https://github.com/user-attachments/assets/2ee62e92-e677-4717-93be-77d6dd1ecbf9)
+
+
+Post Build Action , select the option Build Other Project Project-C
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b94f430d-2173-4d08-8432-f7e86ec9b47c" />
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/efa90369-f73d-4b25-bcc9-72841cb42c4f" />
+
+
+
+Project-C::
+============
+
+
+Github URL:::https://github.com/srinfotechbatch5/devOpsWeb.git
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69efc57e-2857-46d7-a3ab-34a58b5b0aae" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/256cac24-5476-4b71-8079-adb194559549" />
+
