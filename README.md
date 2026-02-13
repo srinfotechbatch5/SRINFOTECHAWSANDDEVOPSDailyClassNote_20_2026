@@ -2332,3 +2332,176 @@ Success all the stages & Steps
 
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/470c2ba0-fdd0-4981-ba34-87865fb4b684" />
+
+
+
+12/02/2026::
+===============
+
+
+Key elements in the declarative pipeline:::
+======================================
+
+pipeline: This is the top-level structure.
+
+agent: Specifies where the pipeline will run, such as on any available agent, a specific node, or a Docker container.
+
+stages: Defines the different steps or stages in the pipeline (e.g., Build, Test, Deploy).
+
+steps: Commands to be executed in each stage.
+
+
+
+Please try to create one pipeline job in jenkinsfile and execute the below Declarative pipeline example:;
+
+pipeline {
+
+agent any
+
+stages {
+    stage('Clone') {
+        steps {
+            git branch: 'main', url: 'https://github.com/srinfotech7358/spring-petclinic.git'
+        }
+    }
+    
+      stage('Build') {
+        steps {
+           bat 'mvn clean install'
+        }
+    }
+      stage('Test') {
+        steps {
+           bat 'mvn test'
+        }
+    }
+    
+      stage('Generate Junit Test Results') {
+        steps {
+           junit 'target/surefire-reports/*.xml'
+        }
+    }
+    
+      stage('Generate Artifacts') {
+        steps {
+           archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+        }
+    }
+}
+}
+
+
+See test results & antifactory ::
+================================
+
+archive the artifact :: target/*.jar
+
+Junit test results:: target/surefire-reports/*.xml
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b216b582-74a9-47de-9351-1fcd88930af4" />
+
+
+declarative pipeline::
+========================
+
+pipeline {
+    
+    agent any
+    
+    stages{
+       
+        stage('checkout-->clone'){
+         
+            steps{
+            
+                git branch: 'feature/2026.02.06', url: 'https://github.com/srinfotechbatch5/spring-petclinic.git'
+                
+            }
+        }
+        
+        stage('Build'){
+            
+            steps{
+           
+            bat 'mvn install'
+        }
+        
+        }
+       
+        stage('Test'){
+            
+            steps{
+               
+                bat 'mvn test'
+           
+            }
+        }
+       
+        stage('Generate Junit Tests Results'){
+            
+            steps{
+               
+                junit 'target/surefire-reports/*.xml'
+           
+            }
+       
+        }
+       
+        stage('Generated the Artifacts'){
+           
+            steps{
+               
+                archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+           
+            }
+       
+        }
+    
+    }
+
+}
+
+
+
+Scripted Pipeline::
+==================
+
+node{
+    
+    stage('Clone'){
+        
+        git branch: 'feature/2026.02.06', url: 'https://github.com/srinfotechbatch5/spring-petclinic.git'
+  
+    }
+    
+    stage('Build'){
+        
+       
+        bat 'mvn clean install'
+    
+    }
+   
+    stage('test'){
+       
+        bat 'mvn test'
+   
+    }
+    
+    stage('genearted test results'){
+        
+       
+        junit 'target/surefire-reports/*.xml'
+   
+    }
+   
+    stage('published artifacts'){
+        
+       
+        archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+
+        
+   
+    }
+
+}
