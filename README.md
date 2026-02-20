@@ -2904,3 +2904,414 @@ Webhooks provide a more efficient method for triggering actions based on changes
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/86864501-ee8d-4c52-af7f-8cf3f25b06f1" />
 
 
+
+18/02/2026::
+=============
+
+
+CI/CD::
+==========
+
+Continuous Integration & Continutes Deployment & COntinuoues Delivery::
+=======================================================================
+
+Continuous Integration(CI)::the practice of automating the integration of code changes from multiple Developers into a single software project. It's a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository,after which automated builds and tests are run automatically.
+
+developers frequently commit to a shared repository using a version control system such as Git,A continuous integration automatically builds and runs unit tests on the new code changes to immediately using jenkins Orchestration.
+
+
+<img width="1823" height="753" alt="image" src="https://github.com/user-attachments/assets/3f4417a6-6f1f-42f8-bc87-a39bc7207a02" />
+
+
+
+
+Continuous Deployment(CD) :: Continuous Deployment is an extension of continuous delivery. With continuous deployment, every change that passes through the automated tests and builds is automatically deployed to production without any human intervention. The deployment process is fully automated.
+
+Continuous Delivery (CD)::Continuous Delivery is a software development practice in which code changes are automatically built, tested, and prepared for release to production in a consistent and reliable manner. The key distinction of continuous delivery is that the process of deploying the code to production is done manually by a human decision-maker.
+
+
+<img width="1823" height="753" alt="image" src="https://github.com/user-attachments/assets/9df250cb-ba53-4556-ab74-81839e78c22b" />
+
+
+
+Deploy Onlinebookstore/spring-petclinic applications to target server (Tomcat)::
+=====================================================================================================================
+
+
+https://github.com/srinfotechbatch5/onlinebookstore.git
+
+https://github.com/srinfotechbatch5/Petclinic.git
+
+
+please create one new pipeline job
+
+Provide the Description
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9772aee8-eb5e-4d98-b164-81818916196a" />
+
+
+Enabled POLL SCM
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e1a4b078-8137-42d7-ad87-bf5aa463436c" />
+
+
+In Pipeline Section write groovy script using Declarative style 
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2acaf030-4f6d-4d3f-854e-67725212196d" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/277221e4-313a-4733-ae28-bddbdcbe886f" />
+
+
+
+Generate Deploy pipeline script::
+====================================
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd9d8f5e-9f72-405a-9b9f-ee5469565917" />
+
+
+
+
+Script::
+=======
+
+pipeline
+{
+    agent any
+
+    tools{
+
+        maven 'maven'
+    }
+
+stages{
+stage('Git checkout'){
+
+    steps{
+
+        git branch: 'main' url: 'https://github.com/srinfotechbatch4/Petclinic.git'
+
+    }
+}
+
+stage('clean and install'){
+
+    steps{
+
+      sh 'mvn clean install'
+
+    }
+}
+
+stage('Package'){
+
+    steps{
+
+      sh 'mvn package'
+
+    }
+}
+
+stage('Archive the Artifacts'){
+
+    steps{
+
+      sh 'mvn clean install'
+    }
+    post{
+        success{
+
+            archiveArtifacts artifacts: '**target/*.war'
+        }
+    }
+
+    }
+
+
+stage('Test Cases'){
+
+    steps{
+
+      sh 'mvn test'
+
+    }
+}
+
+
+stage('Deploy to tomcat server'){
+
+    steps{
+
+      deploy adapters: [tomcat9(credentialsId: 'tomcat9credentials', path: '', url: 'http://localhost:8080/')], contextPath: 'SRINFOTECH', war: '**/*.war'
+
+    }
+}
+
+}
+}
+
+
+
+19/02/2026::
+=============
+
+
+Integrate Jenkins with Tomcat using Declarative Approach::
+============================================
+
+To integrate Jenkins with Tomcat using the Declarative Pipeline approach, you'll be using Jenkins Pipeline syntax to automate the deployment process to a Tomcat server. This process typically involves building the application, packaging it, and then deploying it to Tomcat.
+
+1. Jenkinsfile Configuration (Declarative Pipeline)
+
+In your Jenkins project, you'll create a Jenkinsfile, which contains the Declarative Pipeline syntax. This file defines the steps involved in the CI/CD pipeline.
+
+Please execute below script in jenkins pipeline job using Declarative style
+
+
+Spring-Petclinic::
+=====================
+
+
+pipeline
+
+{
+    agent any
+
+    tools{
+
+        maven 'maven'
+    }
+
+stages{
+
+stage('Git checkout'){
+
+    steps{
+
+        git branch: 'main', url: 'https://github.com/srinfotechbatch5/Petclinic.git'
+
+    }
+}
+
+stage('clean and install'){
+
+    steps{
+
+      bat 'mvn clean install'
+
+    }
+}
+
+stage('Package'){
+
+    steps{
+
+      bat 'mvn package'
+
+    }
+}
+
+stage('Archive the Artifacts'){
+
+    steps{
+
+      bat 'mvn clean install'
+    }
+    post{
+        success{
+
+            archiveArtifacts artifacts: '**target/*.war'
+        }
+    }
+
+    }
+
+
+stage('Test Cases'){
+
+    steps{
+
+      bat 'mvn test'
+
+    }
+}
+
+
+stage('Deploy to tomcat server'){
+
+    steps{
+
+      deploy adapters: [tomcat9(credentialsId: 'tomcat9credentials', path: '', url: 'http://localhost:8080/')], contextPath: 'SRINFOTECH', war: '**/*.war'
+
+    }
+}
+
+}
+}
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/96c7b15e-5cb4-4fb5-b7f9-9c75df840eb6" />
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d3fa033c-987c-44d7-ac92-b6f73c5605f4" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dd0cd2c4-695d-426e-af04-63674a7006dc" />
+
+
+
+
+Onlinebookstore::
+=============
+
+ pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'master', url: 'https://github.com/srinfotechbatch5/onlinebookstore.git'
+            }
+        }
+        
+          stage('Build') {
+            steps {
+               bat 'mvn clean install'
+            }
+        }
+         stage('Generate Artifacts') {
+            steps {
+               archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+            }
+        }
+
+          stage('Deploy to Tomcat Server') {
+            steps {
+               deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'Tomcat', path: '', url: 'http://localhost:8080')], contextPath: 'SR INFOTECH SOLUTIONS PVT LIMITED', war: 'target/*.war'
+            }
+        }
+    }
+}
+
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e5b7f0d0-0344-4451-9e51-fe7b78064b3e" />
+
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/00a87812-0eae-496c-a4bf-e3b1a0a70d20" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0992ca46-4198-4712-8a58-db224a162b48" />
+
+
+DevOps Web Application::
+===========================
+
+
+pipeline{
+
+    agent any
+
+    stages{
+        
+        stage('Clone Project'){
+
+            
+            steps{
+               
+                git branch: 'feature/2026.02.13', url: 'https://github.com/srinfotechbatch5/devOpsWeb.git'
+           
+            }
+        
+        }
+       
+        stage('Build'){
+
+           
+            steps{
+
+                
+                bat 'mvn clean install'
+            
+            }
+       
+        }
+
+       
+        stage('Test'){
+
+          
+            steps{
+
+               
+                bat 'mvn test'
+            
+            }
+        
+        }
+
+        
+        stage('Package'){
+
+            
+            steps{
+
+                
+                bat 'mvn package'
+            
+            }
+       
+        }
+
+
+        
+        stage('Generated Artifacts'){
+
+           
+            steps{
+
+              
+                archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+            
+            }
+      
+        }
+
+       
+        stage('Deploy'){
+
+           
+            steps{
+
+               
+                deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'TomcatCredentialsNew', path: '', url: 'http://localhost:8080/')], contextPath: 'DevOpsWebApplication', war: 'target/*.war'
+            
+            }
+       
+        }
+    
+    }
+
+}
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/17bc3292-f437-4d44-b620-78da4bbed840" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3d416415-a7f4-4a5a-ae64-e6cbae0636c2" />
+
+
