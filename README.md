@@ -3917,32 +3917,37 @@ go to Quality Profiles
 
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/592f6bd4-3787-4495-8947-84dd2a253699" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f702ea7f-9575-4226-9ce6-8748b8f840d9" />
+
 
 
 select Language
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d43cdd8e-4f68-48b0-87e1-e38371d70924" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/681c75fc-aeab-4860-8682-2d2a906b7ce1" />
+
 
 
 total java Rules 527
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e65055fb-3d0c-46be-9d2b-e148c5eb2be7" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8ed172c6-5a47-401d-9def-120f5273a261" />
+
 
 
 
 at right saide top click create
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ac9ca09a-5547-4ae8-af74-ab27dd516bfc" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/35d49178-73ec-4885-a321-a4decdc9966b" />
+
 
 
 provide the Language & Name and click Create
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/699b7e09-dd18-47c3-9a13-7f4232ad5c63" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f847eabd-44c0-430d-8be9-bfcb6ee588cc" />
+
 
 
 
@@ -3950,31 +3955,33 @@ your own profile
 
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/726b58bc-9afd-4506-a607-e8e55630d0b7" />
 
 
 click Active More rules
 
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8ba1bab-ffde-4409-834c-607412d02364" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3fa4cfc7-ebe2-4a78-b7a8-bcd61b34fe14" />
+
 
 
 Bulk Change
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e3101dd4-aea3-4c0d-ad17-703f8ae719a2" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ca31eb46-4ca1-4767-b856-7ef2914b7d55" />
+
 
 
 Activate In Spring-pipeline project
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/614c1a25-e49f-4491-b99f-aa3f7feda5dc" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b01d5015-11fc-4ee3-8b42-6b68fcf8d010" />
+
 
 
 Sure Apply
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f68066fc-20fe-44d8-9f53-c8bf7494be42" />
+
 
 
 Succcessfully Applied my own quality profile rules
@@ -3982,7 +3989,7 @@ Succcessfully Applied my own quality profile rules
 Activate In Quality Profile (680 rules)
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/40afb4d6-86be-46ef-8c8a-74ef26812e17" />
+
 
 
 Now we are successfully onboarded spring-petclininc project to Sonarqube server
@@ -4013,7 +4020,8 @@ Jfrog Artifactory Overview::
 
 JFrog Artifactory is a universal artifact repository manager that serves as a central hub for storing, managing, and distributing software artifacts, binaries, packages, and other assets throughout the software development lifecycle, improving automation, and ensuring release integrity.
 
-<img width="1804" height="720" alt="image" src="https://github.com/user-attachments/assets/043fe716-14b8-4771-bd15-5791a564030a" />
+<img width="1804" height="720" alt="image" src="https://github.com/user-attachments/assets/12b4d23a-5f16-4d6a-821d-f0b4aa315b8d" />
+
 
 
 Artifact Repository Management:
