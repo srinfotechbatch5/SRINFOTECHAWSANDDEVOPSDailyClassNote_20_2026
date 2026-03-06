@@ -3764,3 +3764,381 @@ Once sonarqube scanner done, please verify the sonarqube dashboard for reports &
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/06b0b6d2-4331-415c-8125-800e1d82daec" />
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a64f6c27-24d6-43ab-ad60-fbefcff1409e" />
+
+
+
+03/03/2026::
+================
+
+Go to Administration
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8e86ab58-c2d9-4f3f-8414-952691a065f0" />
+
+
+
+Click Projects & Select Background Tasks
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/94fa5e45-c471-4f66-aa89-ae873b249045" />
+
+
+You can able to see all scanned projects status
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c2a79822-d630-4580-bee2-62fef19b4bca" />
+
+
+Click on any Project, see the PASSED the quality gates
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0290f00a-4a0d-4777-b86e-165a8ee79def" />
+
+
+Click on Overall Code option
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4dc3dfe0-bbd4-4cd1-9d55-d55358dc0cd4" />
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f8ed7afb-8eeb-4545-8531-555deb3c7399" />
+
+
+see the results
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8e59901-9660-4d20-bf87-d155bc032c32" />
+
+
+here Code coverage is 
+
+Coverage
+82.7%
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0b040b6c-06ce-4073-8afd-74eb7e4a7046" />
+
+
+NOTE:: Coverage is greater than or equal to 80.0%, this should be maintained minimum % every project
+
+NOTE:::Duplicated Lines (%) is less than or equal to 3.0%
+
+
+
+Create My own Quality Gates::
+=======================
+
+Go to Dashboard click on Quality Gates
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/810db00e-fa99-47a2-8ee4-3a5901adfdd1" />
+
+
+at left side we can see create & just click on it
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e376671e-2228-435a-8765-288978270066" />
+
+
+
+Provide the Name & Click Create
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8206d4e2-de26-4192-a7f6-0589fdf804ab" />
+
+
+
+Your own quality gates are created
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/424db715-3699-4ce8-973a-e0f89263db00" />
+
+
+this is your own quality gates
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/73282057-4963-45e4-af8b-5d5d9eb57587" />
+
+
+nditions on New Code
+
+Metric
+
+Operator
+
+Value
+
+Issues
+
+is greater than
+
+0
+
+Security Hotspots Reviewed
+
+is less than
+
+100%
+
+Coverage
+
+is less than
+
+80.0%
+
+
+Duplicated Lines (%)
+
+is greater than
+
+
+select your project
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8bcc158c-e0cc-4a96-a67b-f35b72fa2fc2" />
+
+
+apply the Grant permissions to a user or a group
+
+
+
+Apply all the permissions & click Add
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d4b37339-5fa7-4af7-81eb-4ef8840c817e" />
+
+
+
+Create my own Quality Profile::
+================================
+
+go to Quality Profiles
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/592f6bd4-3787-4495-8947-84dd2a253699" />
+
+
+select Language
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d43cdd8e-4f68-48b0-87e1-e38371d70924" />
+
+
+total java Rules 527
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e65055fb-3d0c-46be-9d2b-e148c5eb2be7" />
+
+
+
+at right saide top click create
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ac9ca09a-5547-4ae8-af74-ab27dd516bfc" />
+
+
+provide the Language & Name and click Create
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/699b7e09-dd18-47c3-9a13-7f4232ad5c63" />
+
+
+
+your own profile
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/726b58bc-9afd-4506-a607-e8e55630d0b7" />
+
+
+click Active More rules
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8ba1bab-ffde-4409-834c-607412d02364" />
+
+
+Bulk Change
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e3101dd4-aea3-4c0d-ad17-703f8ae719a2" />
+
+
+Activate In Spring-pipeline project
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/614c1a25-e49f-4491-b99f-aa3f7feda5dc" />
+
+
+Sure Apply
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f68066fc-20fe-44d8-9f53-c8bf7494be42" />
+
+
+Succcessfully Applied my own quality profile rules
+
+Activate In Quality Profile (680 rules)
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/40afb4d6-86be-46ef-8c8a-74ef26812e17" />
+
+
+Now we are successfully onboarded spring-petclininc project to Sonarqube server
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/304cc022-c9c3-4af6-a98f-0970ab7b999e" />
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d562ceec-487e-4d65-8e47-a5589dbccb77" />
+
+
+
+Running the Pipeline Once the pipeline is configured, Jenkins will execute the SonarQube analysis during the build process. After the build completes, you can view the analysis results in your SonarQube dashboard.
+
+
+
+Code coverage Code smells Bugs Vulnerabilities Duplications These reports will be available in the SonarQube dashboard for your project.
+
+
+05/03/2026::
+=============
+
+Jfrog Artifactory Overview::
+========================
+
+
+JFrog Artifactory is a universal artifact repository manager that serves as a central hub for storing, managing, and distributing software artifacts, binaries, packages, and other assets throughout the software development lifecycle, improving automation, and ensuring release integrity.
+
+<img width="1804" height="720" alt="image" src="https://github.com/user-attachments/assets/043fe716-14b8-4771-bd15-5791a564030a" />
+
+
+Artifact Repository Management:
+
+Allows for storing binaries and artifacts (e.g., libraries, packages, Docker images) in a centralized location.
+Supports all major package types (e.g., Maven, Gradle, npm, NuGet, RubyGems, etc.).
+Version Control:
+
+Helps in managing versions of your artifacts and ensures the correct version is used during builds and deployments.
+Integration with CI/CD:
+
+Integrates seamlessly with CI/CD tools like Jenkins, Bamboo, GitLab CI, and others.
+Enables automated publishing of artifacts as part of your continuous integration pipeline.
+Access Control & Security:
+
+Provides fine-grained access control and permissions for users and groups.
+Supports user authentication, security, and audit trails to ensure compliance and secure artifact management.
+Replication:
+
+Allows you to replicate artifacts across multiple Artifactory instances, ensuring high availability and disaster recovery capabilities.
+Remote Repositories:
+
+Artifactory can proxy remote repositories, allowing you to cache and fetch external dependencies without re-downloading them each time.
+Promotion & Release Management:
+
+You can "promote" artifacts from one repository to another (e.g., from a development repository to a production repository), allowing for better control over releases.
+Multi-Platform Support:
+
+Artifactory supports multiple programming languages and platforms, making it a universal solution for managing software dependencies and releases.
+
+AWS (Amazon Web Services)::
+========================
+
+Create AWS Free tier Account::
+====================================
+Please go throw the recorded video session and follow the steps to create the free tier AWS account.Let me know if anyone facing any issues.
+
+Amazon Web Services (AWS) is a comprehensive and widely adopted cloud platform offered by Amazon. It provides a broad set of services to help organizations and individuals build and scale applications, manage data, and process workloads in the cloud. AWS is designed to provide flexible, scalable, and cost-effective solutions for computing, storage, networking, machine learning, and much more.
+
+
+
+Step-by-Step: Create an AWS Free Tier Account
+
+
+Go to the AWS Free Tier page
+
+👉 https://aws.amazon.com/free
+
+
+Click “Create a Free Account”
+
+This takes you to the AWS sign-up page.
+
+
+Enter your email and choose a password
+
+
+Email address (must be unique, not tied to an existing AWS account)
+
+
+Strong password
+
+
+AWS account name (any name you choose)
+
+
+
+
+Verify your email
+
+
+AWS sends a verification code to your email.
+
+
+Enter that code on the site to continue.
+
+
+
+
+Choose the account type
+
+
+Personal (for individuals)
+
+
+Professional (for company use)
+
+
+
+
+Enter your contact and payment info
+
+
+Full name, address, and phone number.
+
+
+Credit/debit card details (for identity check; AWS may make a temporary $1 charge).
+
+
+
+
+Phone verification
+
+
+Choose “Text message” or “Voice call.”
+
+
+Enter the code AWS sends to confirm your number.
+
+
+
+
+Select a Support Plan
+
+
+Choose the Basic Support – Free option.
+
+
+
+
+Sign in to the AWS Management Console
+
+
+Go to https://console.aws.amazon.com
+
+
+Log in using your email and password.
+
