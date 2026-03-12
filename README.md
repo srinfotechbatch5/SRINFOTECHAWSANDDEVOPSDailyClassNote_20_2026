@@ -4814,72 +4814,10 @@ update the all packages ,please run below command
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3b76e193-7495-4fb8-9cce-37f2a6732f16" />
 
 
-Install JDK & Maven:;
+Install JDK
 ============
 
-JDK link
-
-https://bluevps.com/blog/how-to-install-java-on-ubuntu
-
-MAven link
-
-https://phoenixnap.com/kb/install-maven-on-ubuntu
-
-
-
->sudo apt-get install maven
-
->java -version
-
->mvn -v
-
-Set java home environment 
-
->sudo vi /etc/environment
-
-JAVA_HOME=”/usr/lib/jvm/java-8-openjdk-amd64/jre”
-
-MAVEN_HOME=”/usr/share/maven”
-
-Reload your system environment
-
->source /etc/environment
-
-Veriy the variables was set correctly
-
->echo $JAVA_HOME
-
->echo $MAVEN_HOME
-
-
-Class Note::
-=============
-
-after installed jdk17 & Maven you should be setup the environemnt variabels in ubuntu
- 
- 
- >sudo vi /etc/environment
- 
- 1.press i from your keyboard
-
- 2.press esc from your keyboard
- 
- 3.swift+:
-
- 4.wq
-
- 5.press enter from your keyboard
- 
- Maven home: /usr/share/maven
- 
- java home:: /usr/lib/jvm/java-17-openjdk-amd64
- 
- 
-JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
-
-MAVEN_HOME="/usr/share/maven"
-
-
+>sudo apt install openjdk-17-jdk
 
 Insatll Jenkins on master machine::
 ========================================
@@ -4887,3 +4825,14 @@ Insatll Jenkins on master machine::
 https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-22-04
 
 https://phoenixnap.com/kb/install-jenkins-ubuntu
+
+
+
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f7616668-c44b-4079-b4cc-82f3a5bc86fb" />
+
+ 
+ 
+
+
+
+
