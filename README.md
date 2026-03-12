@@ -4613,3 +4613,277 @@ AWS CodeCommit: Source control service for managing your code repositories.
 AWS CodeDeploy: Automates code deployments to EC2 instances and Lambda.
 
 AWS CodePipeline: Continuous integration and continuous delivery (CI/CD) service for automating the release pipeline.
+
+
+10/03/2026::
+=============
+
+
+AWS EC2 ::
+===========
+
+Amazon Elastic Compute Cloud (Amazon EC2) is one of the core services provided by Amazon Web Services (AWS)
+
+Wide Variety of Instance Types:
+
+EC2 instances are grouped into families based on the type of workload they are optimized for. Some common instance families include:
+
+General Purpose: e.g., t3, m5 instances (balanced CPU, memory, and networking).
+
+Compute Optimized: e.g., c5 instances (great for high-performance computing tasks).
+
+Memory Optimized: e.g., r5, x1e instances (designed for high-memory workloads like databases).
+
+
+Master & Node communication Via SSH keys::
+============================================
+
+
+
+<img width="1720" height="771" alt="image" src="https://github.com/user-attachments/assets/302c319f-5a53-4179-89fc-26d1d05d9a83" />
+
+
+
+create EC2 Ubuntu Linux Machine in AWS::
+==================================
+
+Go to AWS and Search EC2
+
+
+https://aws.amazon.com/console/
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b74d26eb-e006-4a8c-bdd1-c6ad61a5317c" />
+
+
+Sign in to console
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/127fa406-6cb4-4531-bf35-21e4d8b0fd45" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4d5b19c0-19de-4328-b0df-05d959f5bd38" />
+
+
+Sign in using root user email
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/54dd429a-9645-4694-b672-e0f09c08e9fb" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/62f78211-1898-4291-ab4c-140d3d543af5" />
+
+Click EC2
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7d3db337-a36a-403c-8d61-0924ef82fa41" />
+
+
+Go to instances at left side bar
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/42d33ae6-1b84-4934-bc5b-df0122473433" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7197ab92-5618-4872-9d3d-988d7d468d43" />
+
+
+
+Click Launch Instances, EC2  ---> Instances  -----> Launch an instance
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2e7cb8fb-a19f-4329-832b-7e2a9df13b16" />
+
+
+Select Ubuntu
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/be45dcf1-7819-4f7c-bbeb-520eb9c6c7c4" />
+
+
+Select Amazon Machine Image (AMI)
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/de98facb-13b6-497e-af1e-940a4c3c473a" />
+
+
+
+select Instance type,t2 medium
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/74b8b230-3e56-45d6-b2bf-31161447265b" />
+
+
+
+Create new key pair and provide key pair name
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bbcf96b5-15de-4242-b582-e323c915c077" />
+
+
+click create pair
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/05a3b15d-577e-49cc-a256-df090e685fe3" />
+
+
+click launch instance
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d13215e0-a952-46b4-9eb2-ed0d4636e29d" />
+
+
+instance will be created
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d8335ca6-e57c-4b23-8a4d-cd6271d85f63" />
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ae686a03-6233-4a68-88ea-688b513a4eac" />
+
+
+
+2 Ubuntu Machines Running Success
+
+1.Master
+
+2.Node
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/22d8560e-5e72-4b48-933e-c4e618779b9c" />
+
+
+
+Master & Node communication Via SSH keys::
+================================
+
+i have to create 2 EC2 ubuntu machines in AWS
+
+1. Jenkinsmaster
+
+2. Node
+
+
+
+
+<img width="1478" height="720" alt="image" src="https://github.com/user-attachments/assets/c2d9271e-ef7e-4795-a337-3a4652b49527" />
+
+
+we have already .pem file dowloaded in you local machin
+
+right click from .pem and click Open git bash here option
+
+Now Go to AWS Ubuntu machine which is already created in AWS insatnces and select master machine
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69c4bd3c-fb96-4e34-93ce-bb3ab176f5e4" />
+
+
+Click Connect
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/608b56e0-275b-4854-a135-2f54886dd0ea" />
+
+
+Click SSH Client
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5cf59bd9-ec79-446c-96eb-e36e05c17a2a" />
+
+
+Copy URL
+
+>ssh -i "Batch4.pem" ubuntu@ec2-18-237-178-192.us-west-2.compute.amazonaws.com
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e5cd3cef-ad51-4604-8e02-b74981dec51c" />
+
+
+Now past that url in Gitbash
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/327cb240-6f1f-4b6a-8db5-718510aab388" />
+
+
+switch to root user below command run
+
+>Sudo -i
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47049e39-538e-4a1e-8810-36c90abbed3b" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/51bd5a55-81ce-4fff-84df-f8ad2e20fedb" />
+
+
+update the all packages ,please run below command
+
+>sudo apt-get update
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c5486332-2033-4550-a134-c556657debfc" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3b76e193-7495-4fb8-9cce-37f2a6732f16" />
+
+
+Install JDK & Maven:;
+============
+
+JDK link
+
+https://bluevps.com/blog/how-to-install-java-on-ubuntu
+
+MAven link
+
+https://phoenixnap.com/kb/install-maven-on-ubuntu
+
+
+
+>sudo apt-get install maven
+
+>java -version
+
+>mvn -v
+
+Set java home environment 
+
+>sudo vi /etc/environment
+
+JAVA_HOME=”/usr/lib/jvm/java-8-openjdk-amd64/jre”
+
+MAVEN_HOME=”/usr/share/maven”
+
+Reload your system environment
+
+>source /etc/environment
+
+Veriy the variables was set correctly
+
+>echo $JAVA_HOME
+
+>echo $MAVEN_HOME
+
+
+Class Note::
+=============
+
+after installed jdk17 & Maven you should be setup the environemnt variabels in ubuntu
+ 
+ 
+ >sudo vi /etc/environment
+ 
+ 1.press i from your keyboard
+
+ 2.press esc from your keyboard
+ 
+ 3.swift+:
+
+ 4.wq
+
+ 5.press enter from your keyboard
+ 
+ Maven home: /usr/share/maven
+ 
+ java home:: /usr/lib/jvm/java-17-openjdk-amd64
+ 
+ 
+JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+
+MAVEN_HOME="/usr/share/maven"
+
+
+
+Insatll Jenkins on master machine::
+========================================
+
+https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-22-04
+
+https://phoenixnap.com/kb/install-jenkins-ubuntu
