@@ -4849,7 +4849,8 @@ i have to create 2 EC2 ubuntu machines in AWS
 
 
 
-<img width="1478" height="720" alt="image" src="https://github.com/user-attachments/assets/c2d9271e-ef7e-4795-a337-3a4652b49527" />
+<img width="1689" height="738" alt="image" src="https://github.com/user-attachments/assets/26a2c9ad-ea97-4755-9094-c2a0e2f15296" />
+
 
 
 we have already .pem file dowloaded in you local machin
@@ -5314,6 +5315,12 @@ Session NOTE:::
 
 Master & Node Communicatiion Via SSH keys::
 ===========================================
+
+
+
+<img width="1689" height="738" alt="image" src="https://github.com/user-attachments/assets/18d430c1-2c09-4a27-9dd2-9ac3cd97f712" />
+
+
 >sudo -i
 
 >sudo apt update
