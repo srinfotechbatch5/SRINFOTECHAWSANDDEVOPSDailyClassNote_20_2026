@@ -5460,7 +5460,9 @@ Docker is an opensource & Applicatuions level virtualization technology and it's
 
 Docker is an open-source platform that automates the deployment, scaling, and management of applications in lightweight, portable containers. Containers are isolated environments that package an application and all its dependencies (such as libraries, binaries, and configurations) to ensure it runs uniformly across different computing environments.
 
-<img width="1162" height="449" alt="image" src="https://github.com/user-attachments/assets/6f4d8e0c-cc94-4210-84be-f7d7898aad1d" />
+
+<img width="1149" height="434" alt="image" src="https://github.com/user-attachments/assets/5e7b8124-090c-4c7e-8927-ebbc0dfd482c" />
+
 
 
 
