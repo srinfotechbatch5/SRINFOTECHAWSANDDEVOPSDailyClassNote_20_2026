@@ -5450,4 +5450,42 @@ if keys are copied correctly commenucation will be happend
 
 
 
+06/04/2026::
+=============
+
+ Docker Introductions::
+=================
+
+Docker is an opensource & Applicatuions level virtualization technology and it's called containirazition.
+
+Docker is an open-source platform that automates the deployment, scaling, and management of applications in lightweight, portable containers. Containers are isolated environments that package an application and all its dependencies (such as libraries, binaries, and configurations) to ensure it runs uniformly across different computing environments.
+
+<img width="1162" height="449" alt="image" src="https://github.com/user-attachments/assets/6f4d8e0c-cc94-4210-84be-f7d7898aad1d" />
+
+
+Docker is a platform and that make it easier to create, deploy, and run applications using containers. Containers are lightweight, standalone, and executable units that include everything needed to run a piece of software, including the code, runtime, libraries, and system tools.
+
+container ::
+==============
+1.container is an insolation area of executuions of your applications
+ OR
+ instance of images are called containers
+2.Containers are created from “images”
+3. Containers are the core of Docker. They are lightweight, portable, and isolated environments where applications run.
+  Docker is run your software packages /Applications  in containers called containarizations.
+
+4. if you build a docker container for your application called containerization
+5. containers have it’s own boundaries  
+
+who will create containers?
+Ans --docker images are created the containers
+
+ Docker Images:
+ ===============
+
+ docker image is a package with all dependencies and the necessary 
+information to create the container and docker image derived from multiple base images.
+
+An image is a snapshot of a container, a blueprint that defines what the container will contain and how it will behave when run. It consists of an application and its dependencies. Docker images are built using a Dockerfile
+
 
