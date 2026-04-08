@@ -5492,3 +5492,293 @@ information to create the container and docker image derived from multiple base 
 An image is a snapshot of a container, a blueprint that defines what the container will contain and how it will behave when run. It consists of an application and its dependencies. Docker images are built using a Dockerfile
 
 
+07/04/2026::
+==============
+
+
+Docker Registry::
+====================
+
+A Docker Registry is a system for storing and distributing Docker images. It is a centralized location where Docker images can be uploaded (pushed), stored, and downloaded (pulled) by users and applications. Docker images are the building blocks of containers, and registries provide a way to manage, version, and share these images across different environments.
+
+Default registry :: https://hub.docker.com/
+
+Physical & Virtual & Hypervisors/VMwares::
+=============================================
+
+1.tomcat & nodejs containers have it’s own process tree,own files systems,own network interfaces own storage,ram…etc
+2.when you want to give application to your team/testers  docker is the best choice and when you want give system to your team/ testers VMwares are best choice.
+3.application level virtulization docker is the best choice and OS level virtulization VMwares are best choice
+4.individually scale the your application very easy in docker
+
+<img width="1162" height="449" alt="image" src="https://github.com/user-attachments/assets/05494c3a-210c-4a65-a07e-59f6170d17cf" />
+
+
+
+Example:: For festival season In your organization leave management application multiple employees are applied leaves at the same time in that scenario docker is very easy to scale the one more application but physically it’s very difficult so docker is the best choice
+
+
+<img width="1162" height="449" alt="image" src="https://github.com/user-attachments/assets/4645b5bb-9c8f-485c-b2d2-bcf8a2c34fbb" />
+
+
+
+
+Install Docker in Ubuntu machine::
+=====================================
+
+Please follow below link steps to install the docker in ubuntu and please read all the content in that link
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
+
+once installed docker please verify below commands::
+
+>docker --version
+
+root@ip-172-31-20-86:~# docker --version
+
+Docker version 28.0.4, build b8034c0
+
+root@ip-172-31-20-86:~# docker info
+Client: Docker Engine - Community
+ Version:    28.0.4
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.22.0
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.34.0
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 28.0.4
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da
+ runc version: v1.2.5-0-g59923ef
+ init version: de40ad0
+ Security Options:
+  apparmor
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.8.0-1024-aws
+ Operating System: Ubuntu 24.04.2 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 2
+ Total Memory: 3.82GiB
+ Name: ip-172-31-20-86
+ ID: 201c6f4b-75d3-4326-adf5-00b9a82a8d4d
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+if above page is came without any erros, it means docker is installed in your machine
+
+
+Docker commands::
+====================
+
+ >docker pull <imagename>
+
+ >docker pull hello-world
+
+ >docker images   ----used to display the all images
+
+ > docker image ls ----used to display the all images
+ 
+ >docker run ---used to build the images and create the container
+
+
+Class Note Docker commands::
+==============================
+
+
+Docker commands::
+
+>docker pull <imagename>
+
+>docker pull hello-world
+
+>docker images
+
+Common Commands:
+  run         Create and run a new container from an image
+  
+  exec        Execute a command in a running container
+ 
+  ps          List containers
+  
+ 
+  build       Build an image from a Dockerfile
+  
+  bake        Build from a file
+ 
+  pull        Download an image from a registry
+ 
+  push        Upload an image to a registry
+
+  images      List images
+ 
+  login       Authenticate to a registry
+ 
+  logout      Log out from a registry
+ 
+  search      Search Docker Hub for images
+ 
+  version     Show the Docker version information
+  
+  info        Display system-wide information
+
+>docker pull <imagename>:<tagname>
+
+>docker pull hello-world:latest
+
+>docker run hello-world:latest
+
+>docker ps
+
+>docker ps -a
+
+>docker rm <containerID> OR <containerName>
+
+NOTE:: one image we can able to cerate number of containers
+
+>docker rm $(docker ps -a)
+
+i want install jenkins using docker conatiners
+
+>docker run -p 8080:8080 jenkins/jenkins:jdk17\
+
+>docker run -d -p 8080:8080 jenkins/jenkins:jdk17
+ running the contaenr in background
+ 
+ >docker run -d -p 8080:8080 jenkins/jenkins:jdk17
+ 
+ go to the inside the conatainers pleas euse below command
+ 
+ >docker exec -it <containerID> /bin/bash
+
+ >docker exec -it 1d9f1ee478e5 /bin/bash
+
+Create the Jenkins container::
+=================================
+
+>docker run -d -p 8080:8080 jenkins/jenkins:jdk21
+
+
+http://35.155.150.89:8080/
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/530aabac-2e7f-4db6-aa07-bde32e46cd12" />
+
+
+
+>docker ps
+
+above command is used to verify the how many containers are running
+
+
+Create the Nginx web based application container::
+=======================================================
+
+>docker run -d -p 80:80 nginx:latest
+
+http://35.155.150.89/
+
+![image](https://github.com/user-attachments/assets/003a7ca7-5a81-4ea6-8b60-3c1dd0b7a74d)
+
+
+>docker ps
+
+above command is used to verify the how many containers are running, you can seee nginx container is running state
+
+
+
+detached mode::
+=================
+
+Docker detached mode refers to running a container in the background
+
+>docker run -d <image_name>
+
+example::
+> docker run -d nginx
+
+Where:
+
+-d is the flag for detached mode.
+
+<image_name> is the name of the Docker image you want to run.
+
+> docker run -d nginx
+
+This command will:
+
+Run the nginx container in detached mode.
+
+Start the container in the background.
+
+To view the containers running in detached mode, you can use the docker ps command:
+======================================
+
+>docker ps
+
+Stopping a Container::
+=================
+
+>docker stop <containerID>
+
+Start a Container::
+=================
+
+>docker start <containerID>
+
+To run a command inside a running container:
+======================
+
+>docker exec -it <container_id_or_name> <command>
+>docker exec -it 5336d949f33b /bin/bash
+
+>root@5336d949f33b:/# hostname
+5336d949f33b
+>root@5336d949f33b:/# hostname -i
+172.17.0.3
+
+
+![image](https://github.com/user-attachments/assets/c7114894-3fcd-46b0-b393-6f296d23b845)
+
+NOTE:::
+=========
+
+>docker exec -it 5178eb58223a /bin/bash
+Use this command inside the container
+
+>ctrl pq
+Outside the containers
