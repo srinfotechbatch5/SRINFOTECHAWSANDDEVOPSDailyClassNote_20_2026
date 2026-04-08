@@ -5696,7 +5696,8 @@ Create the Jenkins container::
 http://35.155.150.89:8080/
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/530aabac-2e7f-4db6-aa07-bde32e46cd12" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d3162071-7a92-4b7d-a309-42a0b5f8cee1" />
+
 
 
 
@@ -5710,9 +5711,10 @@ Create the Nginx web based application container::
 
 >docker run -d -p 80:80 nginx:latest
 
-http://35.155.150.89/
+http://3.94.203.109/
 
-![image](https://github.com/user-attachments/assets/003a7ca7-5a81-4ea6-8b60-3c1dd0b7a74d)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b8cdd2dd-31da-47be-929c-356198e09956" />
+
 
 
 >docker ps
@@ -5771,8 +5773,6 @@ To run a command inside a running container:
 >root@5336d949f33b:/# hostname -i
 172.17.0.3
 
-
-![image](https://github.com/user-attachments/assets/c7114894-3fcd-46b0-b393-6f296d23b845)
 
 NOTE:::
 =========
