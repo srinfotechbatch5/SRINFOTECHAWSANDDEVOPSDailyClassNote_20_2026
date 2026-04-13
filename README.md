@@ -5937,3 +5937,86 @@ Usefull commands:
 >ctrl+pq or exit
 
 >docker image tag nginx srinfotech7358/srinfotechnginx:latest
+
+
+
+10/04/2026::
+============
+
+
+Dockerfile Introduction::
+=================
+
+A Dockerfile is a script containing a series of instructions on how to build a Docker image. It defines the environment and application setup, including dependencies, configurations, and the necessary steps to get your application running in a container.
+
+dockerfile is a text file, and it have set up of all instructiuons
+
+https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/
+
+
+Dockerfile::dockerfile is text file, and it have set up of all instructiuons
+
+FROM nginx or ubuntu or 
+
+LABEL "AUthor =nagaraju@gamil.com"
+
+RUN apt update && apt-get install jenkins -y
+
+COPY . .  ----src destnations
+
+ADD  . . -----src destinatuion
+
+CMD ["echo",".jar"]
+
+ENTRYPOINT ["echo", "war"]
+
+EXPOSE 8080,8085
+
+ENV APP_HOME ="Ifocus SOlutions pvt ltd"
+
+WORKDIR $APP_HOME /app
+
+VOLUME 
+
+Key Components of a Dockerfile:
+==========================
+
+FROM: Specifies the base image for the Docker image you're creating.
+
+FROM ubuntu:20.04
+
+RUN: Executes commands inside the container, often used to install dependencies.
+
+RUN apt-get update && apt-get install -y python3
+
+COPY or ADD: Copies files from your local machine into the container.
+
+COPY . /app
+
+WORKDIR: Sets the working directory for any subsequent commands in the Dockerfile.
+
+
+WORKDIR /app
+
+CMD: Specifies the command to run when a container is started from the image.
+
+CMD ["python3", "app.py"]
+
+EXPOSE: Defines the network ports the container will listen on at runtime.
+
+EXPOSE 8080
+
+ENV: Sets environment variables inside the container.
+ENV APP_ENV=production
+CMD & ENTRPOINT can be executed starting of the container
+
+CMD & ENTRYPOINT Different::
+===========================
+--use CMD you can change the value but ENTRYPOINT not possible to change the value at the starting of the container
+--CMD you can change the argument value 
+--ENTRYPOINT can’t change the argument value
+
+CMD ["echo",".jar"]
+ENTRYPOINT ["echo", "war"]
+
+CMD/ENTRYPOINT ====should have something which runs till your app is alive
