@@ -6020,3 +6020,339 @@ CMD ["echo",".jar"]
 ENTRYPOINT ["echo", "war"]
 
 CMD/ENTRYPOINT ====should have something which runs till your app is alive
+
+
+
+13/04/2026::
+===============
+
+github url's::
+==============
+
+https://github.com/dockersamples/helloworld-demo-node
+
+https://github.com/srinfotechbatch5/spring-ms
+
+Note::
+=======
+life time of your container -->time which your cmd/entrypont is alive
+
+
+Example Dockerfile:::
+====================
+
+Here’s a simple Dockerfile example that builds a nodejs web app:
+
+>root@ip-172-31-18-253:~# sudo vi Dockerfile
+
+
+# Use an official Node.js runtime as a base image
+FROM node:18
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and install dependencies
+COPY package.json .
+
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose port 3000
+EXPOSE 3000
+
+# Run the application
+CMD ["node", "index.js"]
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c1edbe8-fbb3-43bf-bc35-571bd1d92180" />
+
+
+Example package.json
+=======================
+
+root@ip-172-31-18-253:~# sudo vi package.json
+
+
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/83c6cdd5-3141-4b8c-bec8-0d06bd1a83e4" />
+
+
+Example index.js
+==================
+
+root@ip-172-31-18-253:~# sudo vi index.js
+
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello from Docker!');
+});
+
+app.listen(port, () => {
+  console.log(`App running at http://localhost:${port}`);
+});
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5902a90a-0eba-4646-8f19-67db7d073fb3" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/63bb34d1-774d-48e0-9848-67215348c430" />
+
+
+Building and Running a Docker Image:
+Once you’ve written your Dockerfile, you can build and run it using Docker commands:
+
+Build the Docker image:
+==========================
+
+root@ip-172-31-18-253:~# docker build -t srinfotechnodejs .
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dcc12017-f3e4-437a-be2b-5015105f163d" />
+
+root@ip-172-31-18-253:~# docker images
+REPOSITORY         TAG       IMAGE ID       CREATED         SIZE
+srinfotechnodejs   latest    90e50223164e   7 seconds ago   1.13GB
+root@ip-172-31-18-253:~#
+
+Create & Run the container:
+=============================
+
+>docker run -d -p 80:80 srinfotechnodejs:latest
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c1995df6-1cec-42cf-9b54-39c4a8ed966e" />
+
+
+
+root@ip-172-31-18-253:~# docker run -d -p 3000:3000 srinfotechnodejs:latest
+
+04ab1eb49a96ad9ecc7b4d84eebf0462c05dd97db02f50d5436796427dc010cf
+
+root@ip-172-31-18-253:~#
+
+
+root@ip-172-31-18-253:~# docker ps
+CONTAINER ID   IMAGE                     COMMAND                  CREATED              STATUS              PORTS                                         NAMES
+82bf288b2a2d   srinfotechnodejs:latest   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   distracted_jemison
+root@ip-172-31-18-253:~#
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a4b5f3d8-313d-4203-9d81-d42c5b752f61" />
+
+
+Clone the Spring-micro service Project::
+=========================================
+
+>git clone https://github.com/srinfotechbatch3/spring-ms.git
+
+root@ip-172-31-18-253:~# git clone https://github.com/srinfotechbatch3/spring-ms.git
+Cloning into 'spring-ms'...
+remote: Enumerating objects: 266, done.
+remote: Counting objects: 100% (169/169), done.
+remote: Compressing objects: 100% (91/91), done.
+remote: Total 266 (delta 55), reused 103 (delta 31), pack-reused 97 (from 1)
+Receiving objects: 100% (266/266), 29.17 MiB | 38.34 MiB/s, done.
+Resolving deltas: 100% (84/84), done.
+root@ip-172-31-18-253:~#
+
+
+A **Dockerfile** is a script containing a series of instructions on how to build a Docker image. It defines the environment and application setup, including dependencies, configurations, and the necessary steps to get your application running in a container. Essentially, it's the blueprint for creating Docker images.
+
+### Key Components of a Dockerfile:
+1. **FROM**: Specifies the base image for the Docker image you're creating.
+   ```dockerfile
+   FROM ubuntu:20.04
+   ```
+
+2. **RUN**: Executes commands inside the container, often used to install dependencies.
+   ```dockerfile
+   RUN apt-get update && apt-get install -y python3
+   ```
+
+3. **COPY** or **ADD**: Copies files from your local machine into the container.
+   ```dockerfile
+   COPY . /app
+   ```
+
+4. **WORKDIR**: Sets the working directory for any subsequent commands in the Dockerfile.
+   ```dockerfile
+   WORKDIR /app
+   ```
+
+5. **CMD**: Specifies the command to run when a container is started from the image.
+   ```dockerfile
+   CMD ["python3", "app.py"]
+   ```
+
+6. **EXPOSE**: Defines the network ports the container will listen on at runtime.
+   ```dockerfile
+   EXPOSE 8080
+   ```
+
+7. **ENV**: Sets environment variables inside the container.
+   ```dockerfile
+   ENV APP_ENV=production
+   ```
+
+### Example Dockerfile
+Here’s a simple Dockerfile example that builds a Python web app:
+
+```dockerfile
+# Use an official Python runtime as the base image
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the current directory contents into the container
+COPY . /app
+
+# Install the required dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the port the app runs on
+EXPOSE 5000
+
+# Define the command to run the application
+CMD ["python", "app.py"]
+```
+
+### Building and Running a Docker Image:
+Once you’ve written your Dockerfile, you can build and run it using Docker commands:
+
+1. **Build the Docker image**:
+   ```bash
+   docker build -t my-python-app .
+   ```
+
+2. **Run the container**:
+   ```bash
+   docker run -p 5000:5000 my-python-app
+   ```
+
+The Dockerfile streamlines the process of creating consistent and reproducible environments, making it easier to deploy applications across different systems.
+
+
+Please try Below Example on Docker file:
+============================================
+
+https://docs.docker.com/get-started/workshop/02_our_app/
+
+
+Spring Micro Services Aplication::
+=======================
+
+https://github.com/srinfotech7358/spring-ms.git
+
+LAB Practice::
+==============
+
+root@ip-172-31-32-42:~# git clone https://github.com/srinfotech7358/spring-ms.git
+Cloning into 'spring-ms'...
+remote: Enumerating objects: 242, done.
+remote: Counting objects: 100% (145/145), done.
+remote: Compressing objects: 100% (78/78), done.
+remote: Total 242 (delta 47), reused 103 (delta 31), pack-reused 97 (from 1)
+Receiving objects: 100% (242/242), 29.16 MiB | 3.85 MiB/s, done.
+Resolving deltas: 100% (76/76), done.
+root@ip-172-31-32-42:~# ls
+getting-started-app  snap  spring-ms
+root@ip-172-31-32-42:~# cd spring-ms/
+root@ip-172-31-32-42:~/spring-ms# ls
+Dockerfile  azure-pipeline.yml  azure-pipelines.yml  deploy.yaml  pom.xml  src
+root@ip-172-31-32-42:~/spring-ms# sudo vi Dockerfile
+root@ip-172-31-32-42:~/spring-ms# docker build -t srinfotech .
+[+] Building 43.6s (12/12) FINISHED                                    docker:default
+ => [internal] load build definition from Dockerfile                             0.0s
+ => => transferring dockerfile: 256B                                             0.0s
+ => WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 1)   0.0s
+ => [internal] load metadata for registry.access.redhat.com/ubi8/openjdk-11:lat  0.9s
+ => [internal] load metadata for docker.io/library/maven:3.6.3-jdk-11            1.0s
+ => [auth] library/maven:pull token for registry-1.docker.io                     0.0s
+ => [internal] load .dockerignore                                                0.0s
+ => => transferring context: 2B                                                  0.0s
+ => [internal] load build context                                                0.3s
+ => => transferring context: 30.64MB                                             0.3s
+ => [stage-1 1/2] FROM registry.access.redhat.com/ubi8/openjdk-11:latest@sha25  25.4s
+ => => resolve registry.access.redhat.com/ubi8/openjdk-11:latest@sha256:28b35ee  0.0s
+ => => sha256:28b35eea470174a39befd8eb9250a3276b79a4f6e7dac7872 1.47kB / 1.47kB  0.0s
+ => => sha256:8be99c30a4e5b021129310847bddca64a93fb38b0c8dfeac482b4 596B / 596B  0.0s
+ => => sha256:0c46377f1021ce6db9f2457907fe43fd1001b2ecc1ae2ac 30.70kB / 30.70kB  0.0s
+ => => sha256:e0348fdb2685077d22116d294a90a253709aba78815882a 39.49MB / 39.49MB  2.6s
+ => => sha256:50d776090f4e8d167cbe918c0da58f7b67533ab58d59 113.69MB / 113.69MB  18.7s
+ => => extracting sha256:e0348fdb2685077d22116d294a90a253709aba78815882a57fcc53  2.7s
+ => => extracting sha256:50d776090f4e8d167cbe918c0da58f7b67533ab58d59ffa6acb6f2  6.4s
+ => [stage1 1/3] FROM docker.io/library/maven:3.6.3-jdk-11@sha256:1d29ccf46ef2  16.5s
+ => => resolve docker.io/library/maven:3.6.3-jdk-11@sha256:1d29ccf46ef2a5e64f7d  0.0s
+ => => sha256:1801d353e27e68d60355b371ddfd2ed8d06204bc3266f1746 2.42kB / 2.42kB  0.0s
+ => => sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd 50.43MB / 50.43MB  1.0s
+ => => sha256:1d29ccf46ef2a5e64f7de3d79a63f9bcffb4dc56be0ae3daed5ca 549B / 549B  0.0s
+ => => sha256:e23b595c92ada5c9f20a27d547ed980a445f644eb1cbde7cf 8.93kB / 8.93kB  0.0s
+ => => extracting sha256:004f1eed87df3f75f5e2a1a649fa7edd7f713d1300532fd0909bb3  3.6s
+ => => sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01 7.83MB / 7.83MB  1.4s
+ => => sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b 10.00MB / 10.00MB  1.7s
+ => => sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59 51.84MB / 51.84MB  3.1s
+ => => sha256:d7eb6c022a4e6128219b32a8e07c8c22c89624ff440ebac15 5.29MB / 5.29MB  2.8s
+ => => sha256:6c215442f70bd949a6f2e8092549943905e2d4f9c87a4f532d774 213B / 213B  3.1s
+ => => sha256:cf5eb43522f68d7e2347e19ad70dadcf1594d25b792ede046 9.58MB / 9.58MB  3.7s
+ => => sha256:355e8215390faee903502a9fddfc65cd823f1606f0533 202.81MB / 202.81MB  6.8s
+ => => sha256:4fee0489a65b64056f81358639bfe85fd87776630830fd02ce8c1 855B / 855B  4.1s
+ => => sha256:413646e6fa5d7bcd9722d3e400fc080a77deb505baed79afa5fed 363B / 363B  4.3s
+ => => extracting sha256:5d6f1e8117dbb1c6a57603cb4f321a861a08105a81bcc6b01b0ec2  0.6s
+ => => extracting sha256:48c2faf66abec3dce9f54d6722ff592fce6dd4fb58a0d0b7228293  0.3s
+ => => extracting sha256:234b70d0479d7f16d7ee8d04e4ffdacc57d7d14313faf59d332f18  2.9s
+ => => extracting sha256:d7eb6c022a4e6128219b32a8e07c8c22c89624ff440ebac1506121  0.2s
+ => => extracting sha256:6c215442f70bd949a6f2e8092549943905e2d4f9c87a4f532d7740  0.0s
+ => => extracting sha256:355e8215390faee903502a9fddfc65cd823f1606f053376ba2575a  3.0s
+ => => extracting sha256:cf5eb43522f68d7e2347e19ad70dadcf1594d25b792ede0464c293  0.2s
+ => => extracting sha256:4fee0489a65b64056f81358639bfe85fd87776630830fd02ce8c15  0.0s
+ => => extracting sha256:413646e6fa5d7bcd9722d3e400fc080a77deb505baed79afa5feda  0.0s
+ => [stage1 2/3] COPY . .                                                        1.2s
+ => [stage1 3/3] RUN mvn clean package                                          24.0s
+ => [stage-1 2/2] COPY --from=stage1 target/*.jar app.jar                        0.1s
+ => exporting to image                                                           0.1s
+ => => exporting layers                                                          0.1s
+ => => writing image sha256:a1aa2587a6a74ca2d5e113d039a0c5198d12f54919056285ec3  0.0s
+ => => naming to docker.io/library/srinfotech                                    0.0s
+
+ 1 warning found (use docker --debug to expand):
+ - FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 1)
+root@ip-172-31-32-42:~/spring-ms# docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+srinfotech   latest    a1aa2587a6a7   17 seconds ago   410MB
+test         latest    944581c42756   7 minutes ago    166MB
+root@ip-172-31-32-42:~/spring-ms# docker run -d -p 8080:8080 srinfotech:latest
+eb3d6d70bc9e049db0255b30f406b9559f7b03d1e82862d59205f363e1b8087e
+root@ip-172-31-32-42:~/spring-ms# docker ps
+CONTAINER ID   IMAGE               COMMAND               CREATED         STATUS         PORTS                                                             NAMES
+eb3d6d70bc9e   srinfotech:latest   "java -jar app.jar"   6 seconds ago   Up 5 seconds   8443/tcp, 0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp, 8778/tcp   fervent_bassi
+root@ip-172-31-32-42:~/spring-ms# Read from remote host ec2-34-222-12-103.us-west-2.compute.amazonaws.com: Connection reset by peer
+Connection to ec2-34-222-12-103.us-west-2.compute.amazonaws.com closed.
+client_loop: send disconnect: Connection reset by peer
+
+
+
+Application up & running::
+=============================
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/03d89434-a183-4a0e-8733-2f1dc4d65cef" />
+
+
