@@ -6356,3 +6356,155 @@ Application up & running::
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/03d89434-a183-4a0e-8733-2f1dc4d65cef" />
 
 
+
+14/04/2026::
+==============
+
+Network Types in Docker:
+============================
+
+•	bridge: Default network for containers on the same host.
+
+•	host: The container shares the host’s networking stack.
+
+•	overlay: Used for multi-host networking (requires Docker Swarm).
+
+•	none: No network connectivity is assigned to the container.
+
+•	>bridge network is used for single node communication
+
+•	>overlay network is used for multi node communication
+
+•	---Kubernetes/swarm are used to communicate 2 containers in docker that’s like orchestration
+macvlan network:: may be used to give containers across different hosts unique, routable IP addresses in a larger network
+IPVLAN:Containers share the host’s MAC address but have individual IP addresses.
+
+
+Docker::
+===========
+
+Docker is a platform that allows you to create, deploy, and run applications inside containers. Containers are lightweight, portable, and ensure that the application works the same regardless of where it's deployed, making Docker a powerful tool for developing, testing, and deploying applications.
+
+
+Key Features of Docker:
+=======================
+•	Containerization: Docker encapsulates applications and their dependencies into containers, ensuring consistency across environments (e.g., development, staging, production).
+•	Images and Containers: Docker uses images to define the environment for an application. Containers are instances of those images.
+
+•	Docker Hub: Docker Hub is a cloud-based registry where you can find pre-built images or upload your own.
+
+•	Portability: Docker containers can run on any system with Docker installed, from your laptop to a cloud server.
+
+•	Isolation: Containers are isolated from the host system, so they don’t interfere with other processes or systems.
+
+Common Docker Commands:
+===================
+•	Build an Image: docker build -t my-image .
+
+•	Run a Container: docker run -d --name my-container my-image
+
+•	List Containers: docker ps
+
+•	Stop a Container: docker stop my-container
+
+•	Remove a Container: docker rm my-container
+
+•	List Images: docker images
+
+
+
+Kubernetes Overview::
+========================
+
+
+Kubernetes (often abbreviated as K8s) is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications. Originally developed by Google.
+
+
+
+<img width="1817" height="710" alt="image" src="https://github.com/user-attachments/assets/a54d509b-c1d2-4644-9a8c-2a992ff90b0d" />
+
+
+
+free and opensource container orchestration platform developed by Google along with many open source contributors
+
+it is production grade
+
+free for personal and commercial use
+
+as it is opensource, we won't get support from Google
+
+only supports command line interface (CLI)
+
+doesn't support web console
+
+Kubernetes does provide some basic Dashboard but it is considered a security vulnerability, hence no one uses the Kubernetes Dashboard
+
+Rancher is opensource webconsole for Google Kubernetes
+
+supports inbuilt monitoring features
+
+it can check the health of our application, when it finds your application is not responding, it can repair it or replace it with another good healthy instance of your application
+it supports inbuilt load-balancing
+Master ---Management --(Orchestration) Node machine (minion) --workers (containers)
+
+POD ---the smallest unit, mainatained one or more containers
+
+YAML --key-value paires
+
+1.Container Orchestration: Kubernetes helps you manage multiple containers, ensuring that they run efficiently and reliably across many servers.
+
+2.Scaling: Kubernetes can automatically scale your applications up or down based on demand, making it easier to handle varying workloads.
+
+3.Load Balancing: It can distribute network traffic to different containers, ensuring that applications remain responsive even under heavy loads.
+
+4.Self-Healing: If a container crashes or stops working, Kubernetes can automatically restart or replace it, ensuring the application stays available.
+
+5.Automated Deployment and Rollback: Kubernetes can automate the process of deploying new versions of an application, and if something goes wrong, it can roll back to a previous version.
+
+6.Storage Management: Kubernetes can automatically mount the storage resources you need for your applications, making it easier to manage persistent data.
+
+In short, Kubernetes is designed to make it easier to manage applications at scale in a way that is highly automated, reliable, and efficient. It’s widely used in DevOps platform
+
+Cluster:: collection of nodes with a single responsibility
+
+All the nodes in that cluster do same process, same type of work can will do collection of nodes in cluster
+
+Cluster::
+a cluster might refer to a set of virtual machines or containers working together for a specific application or service.
+
+
+Kubernetes Cluster Components:
+==================================
+
+1.Master Node (Control Plane): The Master Node is the brain of the Kubernetes cluster. It manages the cluster and makes decisions about scheduling, scaling, and maintaining the health of the application. The control plane consists of several key components:
+
+1.API Server::
+The API server exposes the Kubernetes API, which is used to interact with the cluster.
+
+2.Scheduler::
+The scheduler assigns work (pods) to available worker nodes.
+
+3.Controller Manager: :
+Ensures that the desired state of the system is maintained, such as ensuring that the correct number of pods are running.
+
+4.etcd:
+A distributed key-value store used to store all cluster data, including the state of the system (like deployed pods, config maps, and secrets).
+
+Worker Nodes (Minions):
+=========================
+
+o The Worker Nodes are responsible for running the actual application workloads. These nodes host the pods, which are the smallest deployable units in Kubernetes. A worker node typically runs:
+
+1.Kubelet: An agent that ensures the containers in the pods are running and healthy.
+
+2.Kube Proxy: A network proxy that maintains network rules for pod communication.
+
+3.Container Runtime: The software responsible for running containers (e.g., Docker, containerd).
+
+4.Pods::
+
+A pod is the smallest unit of execution in Kubernetes and can contain one or more containers that share resources such as networking and storage. Pods are always deployed in a Kubernetes cluster and are managed by the control plane.
+
+
+
+
