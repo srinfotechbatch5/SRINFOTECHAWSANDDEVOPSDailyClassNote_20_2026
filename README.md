@@ -6562,3 +6562,68 @@ How to Install Kubernetes Cluster on Ubuntu 22.04::
 Please follow the below link steps to configured the Kubernetes Master and Workers 
 
 https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/
+
+
+
+21/04/2026::
+============
+
+How to Install Kubernetes Cluster on Ubuntu 22.04::
+=====================================================
+
+Please follow the below link steps to configured the Kubernetes Master and Workers 
+
+https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/
+
+
+>kubectl get nodes
+
+
+root@k8smaster:~# kubectl get nodes
+NAME         STATUS   ROLES           AGE   VERSION
+k8smaster    Ready    control-plane   12h   v1.28.15
+k8sworker1   Ready    <none>          12h   v1.28.15
+k8sworker2   Ready    <none>          12h   v1.28.15
+
+
+Verify the status of pods in kube-system namespace,
+
+>kubectl get pods -n kube-system
+
+root@k8smaster:~# kubectl get pods -n kube-system
+NAME                                       READY   STATUS    RESTARTS   AGE
+calico-kube-controllers-658d97c59c-92qgs   1/1     Running   0          12h
+
+calico-node-2j6mh                          1/1     Running   0          12h
+
+calico-node-6w8zt                          1/1     Running   0          12h
+
+calico-node-bccc9                          1/1     Running   0          12h
+
+coredns-5dd5756b68-2vpmt                   1/1     Running   0          12h
+
+coredns-5dd5756b68-s68cn                   1/1     Running   0          12h
+
+etcd-k8smaster                             1/1     Running   5          12h
+
+kube-apiserver-k8smaster                   1/1     Running   5          12h
+
+kube-controller-manager-k8smaster          1/1     Running   5          12h
+
+kube-proxy-4dfkl                           1/1     Running   0          12h
+
+kube-proxy-wglb9                           1/1     Running   0          12h
+
+kube-proxy-wl677                           1/1     Running   0          12h
+
+kube-scheduler-k8smaste
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2ef60ee9-a0b1-47cb-a7a7-65714d07459a" />
+
+
+http://98.93.63.103:32673/
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a69478d5-9023-4b85-9c96-620c3042b945" />
+
+
