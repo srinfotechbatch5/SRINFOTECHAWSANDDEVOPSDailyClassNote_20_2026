@@ -7405,14 +7405,17 @@ Navigate to browser url shopfront with port
 
 http://54.236.173.79:31167/
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6d3a9c45-506d-4bdb-ad12-8dd0842de461" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/29356300-7d44-4877-b1ae-7a7d97e26486" />
+
 
 
 Navigate to browser url productcatalogue with port
 
 http://54.236.173.79:31167/products
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/70ac087a-a025-4646-82e6-419539091c28" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ac8eca50-31fa-4f18-9768-0f74a8848465" />
+
 
 
 Navigate to browser url stockmanager with port
@@ -7420,7 +7423,8 @@ Navigate to browser url stockmanager with port
 http://54.236.173.79:32699/stocks
 
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fdce627f-d572-4372-beaf-12cb33acee12" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a1a06359-d32f-4348-be5b-ead48615c6b4" />
+
 
 
 
